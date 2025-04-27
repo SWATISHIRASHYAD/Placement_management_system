@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information Form</title>
+    <link rel="stylesheet" href="registerform.css">
+    <style>
+        /* General reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #e0eafc, #cfdef3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        /* Form container styling */
+        .form {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 30px 40px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        .form h1 {
+            font-size: 2em;
+            color: #34495e;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Form control styling */
+        .formcontrol {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .formcontrol label {
+            display: block;
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+
+        .formcontrol input[type="text"],
+        .formcontrol input[type="email"],
+        .formcontrol input[type="date"],
+        .formcontrol input[type="number"],
+        .formcontrol input[type="file"],select {
+            width: 100%;
+            padding: 12px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Input focus styling */
+        .formcontrol input:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 8px rgba(52, 152, 219, 0.4);
+            outline: none;
+        }
+
+        /* Styling for the submit button */
+        .formsubmit input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #fff;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .formsubmit input[type="submit"]:hover {
+            background: linear-gradient(135deg, #2980b9, #1c6ca1);
+            transform: scale(1.05);
+        }
+
+        /* Styling for "Already submitted" button */
+        .formsubmit button {
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 1em;
+            font-weight: bold;
+            color: #3498db;
+            background-color: transparent;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease, color 0.3s ease;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .formsubmit button a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .formsubmit button:hover {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .formsubmit button a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form">
+        <h1>Registration Form</h1>
+
+        <form action="http://localhost:8008/placement management system/register.php" method="post" enctype="multipart/form-data">
+            <div class="formcontrol">
+                <label for="text">USN:</label><br>
+                <input type="text" id="usn" name="usn" required><br><br>
+            </div>
+            <div class="formcontrol">
+                <label for="name">First Name:</label><br>
+                <input type="text" id="fname" name="fname" required><br><br>
+            </div>
+            <div class="formcontrol">
+                <label for="name">Middle Name:</label><br>
+                <input type="text" id="mname" name="mname" required><br><br>
+            </div>
+            <div class="formcontrol">
+                <label for="name">Last Name:</label><br>
+                <input type="text" id="lname" name="lname" required><br><br>
+            </div>
+            <div class="formcontrol">
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+            </div>
+            <div class="formcontrol">
+                <label for="branch">Branch:</label><br>
+                <select id="branch" name="branch" required>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Electronics and Communication">Electronics and Communication</option>
+                    <option value="Electrical and Electronics">Electrical and Electronics</option>
+                    <option value="Information Science">Information Science</option>
+                    <option value="Civil">Civil</option>
+                    <option value="Mechanical">Mechanical</option>
+                    <option value="Aerospace">Aerospace</option>
+                    <option value="Data Science">Data Science</option>
+                </select><br><br>
+            </div>
+            
+            <div class="formcontrol">
+                <label for="dob">DOB:</label><br>
+                <input type="date" id="dob" name="dob" required><br><br>
+            </div>
+            <div class="formcontrol">
+                <label for="cgpa">CGPA:</label><br>
+                <input type="text" id="cgpa" name="cgpa" required><br><br>
+            </div>
+
+            <div class="formcontrol">
+                <label for="phone">Contact Number:</label><br>
+                <input type="number" id="phone" name="contact" pattern="^\d{10}$" title="Please enter exactly 10 digits"
+                    maxlength="10" required><br><br>
+            </div>
+
+            <!-- Resume Upload Section -->
+            <div class="formcontrol">
+                <label for="resume">Upload Resume:</label><br>
+                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx,.png" required><br><br>
+            </div>
+
+            <div class="formsubmit">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

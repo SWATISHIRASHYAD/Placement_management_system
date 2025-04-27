@@ -1,0 +1,37 @@
+ *{
+    padding:0;
+    margin: 0;
+    color: white;
+   /* text-decoration: none;*/
+}
+#navbar{
+    height: 50px;
+    background-color: #0f1111;
+}
+#belownav{
+    background-color: #0f1111;
+    color:white;
+}
+button{
+    background-color: #f08804;
+}
+#logo{
+    color: #f08804;
+    font-size: 25px;
+}
+a{
+    margin-right: 150px;
+    color:white
+}
+#searchin{
+    font-size: 15px;
+    background-size: 15px;
+}
+#register{
+    background-color: chocolate;
+    color:white;
+}
+#afaq{
+    margin-left: 150px;
+}
+ 
