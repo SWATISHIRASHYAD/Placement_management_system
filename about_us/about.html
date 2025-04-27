@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Placement Management System</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+    <style>
+        .image-slider {
+            position: relative;
+            width: 99%;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .image-slider img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .image-slider img.active {
+            opacity: 1;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+        }
+
+        section.about {
+            background-color: #D7B26D;
+            font-weight: 700px;
+            font-size: 120%;
+            padding:0;
+            margin-top: 10px;
+        }
+        html, body {
+            height: auto;
+            overflow-y: auto;
+            font-family: Arial, sans-serif;
+        }
+        .about {
+            padding: 20px;
+            max-width: 95%;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        .about p {
+            margin-bottom: 15px;
+            text-align: center;
+            color: #555;
+        }
+        .about h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin: 20px;
+            color: #333;
+        }
+
+        footer {
+            background-color: #f8f9fa;
+        }
+
+        footer pre {
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body >
+    <div class="image-slider">
+        <img src="bldeacetstatue.jpg" alt="Image 1">
+        <img src="bldeacetcampus.jpg" alt="Image 2">
+        <img src="BLDEA_About06.jpg" alt="Image 3">
+    </div>
+    <section style="background-color: #D7B26D;font-weight: 700; font-size: 120%;" class="about container mt-5">
+        <h2>About Us</h2>
+        <div class="text-center mb-4">
+            <p>Welcome to the Placement Management System! Our system is designed to streamline the placement process for both students and employers, providing an efficient platform for career development.</p>
+        </div>
+        <div>
+            <p>The system is built with the goal of providing students with up-to-date job listings, interview scheduling, resume management, and job application tracking.
+            Employers can use the platform to post job openings, schedule interviews, and view student profiles.</p>
+        </div>
+        <div>
+            <p>The Placement department at BLDEACET offers outstanding job opportunities to our students. We aim to secure placements for our students and inspire and support them in becoming first-generation entrepreneurs.</p>
+            <p>Our department actively works on preparing students for aptitude tests, enhancing their personality development, and facilitating meaningful industry-institute interactions. We provide comprehensive support to our students in their career development.</p>
+            <p>Our students are dedicated to making a positive impact on society through technological innovation. This dedication aligns with the values sought by recruiters, who consistently recognize the quality and potential of our students at BLDEACET.</p>
+            <p>We are proud of our track record in securing placements for our graduates, and we continuously strive to maintain the highest standards in preparing them for successful careers in their chosen fields.</p>
+        </div>
+    </section>
+
+    <footer class="bg-light text-center py-4">
+        <div class="container" style="background-color:#333;">
+            <div class="row">
+                <div class="col-md-6">
+                    
+                    <h4 style="color: rgb(22, 241, 22);">CONTACT INFO</h4>
+                    <pre style="color: white;">
+                        BLDEA's V.P. Dr. P.G. Halakatti College of Engineering and 
+                        Technology
+                        Ashram Road, Vijayapura-586101
+                        Phone: 08352-26110
+                        Fax: 08352-262945
+                        Email: principal@bldeacet.ac.in
+                               placement@bldeacet.ac.in, 
+                               mech.prashant@bldeacet.ac.in
+                        Web: bldeacet.ac.in
+                    </pre>
+                        <p>&copy; 2024 Placement Management System | All Rights Reserved</p>
+                </div>
+                <div class="col-md-6">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3127.4353522017727!2d75.71491777409362!3d16.848476818108395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc6558982df81f7%3A0x589f36a4e9dc6fab!2sBLDEA&#39;
+            s%20V%20P%20Dr%20PG%20Halakatti%20College%20of%20Engineering%20%26%20Technology!5e1!3m2!1sen!2sin!4v1730824446898!5m2!1sen!2sin"
+                        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" aria-label="Location Map"></iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const images = document.querySelectorAll('.image-slider img');
+        let currentIndex = 0;
+        setInterval(showNextImage, 3000);
+        function showNextImage() {
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.add('active');
+        }
+
+         // Change image every 4 seconds
+    </script>
+</body>
+
+
+</html>
