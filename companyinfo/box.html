@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Redirect Box</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f9f9f9;
+    }
+
+    .redirect-box {
+      width: 80%; /* Responsive width */
+      max-width: 300px; /* Limit width for larger screens */
+      height: auto;
+      aspect-ratio: 2 / 1; /* Keeps box proportional */
+      background-color: #4CAF50;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5em; /* Responsive font size */
+      text-align: center;
+      cursor: pointer;
+      border: none;
+      border-radius: 10px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .redirect-box:hover {
+      background-color: #45a049;
+      transform: scale(1.05); /* Add a hover effect */
+    }
+
+    /* Media Queries for smaller screens */
+    @media (max-width: 600px) {
+      .redirect-box {
+        font-size: 1.2em; /* Reduce font size on small screens */
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Redirect Box -->
+  <div class="redirect-box" onclick="goToFile()">
+    Companies Visited
+  </div>
+
+  <script>
+    // JavaScript function to redirect to the file
+    function goToFile() {
+      // Replace 'yourfile.php' with the path to your file
+      window.location.href = 'info.php';
+    }
+  </script>
+</body>
+</html>

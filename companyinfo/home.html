@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Placement Management System</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      padding: 0 20px;
+    }
+    header {
+      background: #007BFF;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+    }
+    .section {
+      background: #fff;
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .section h2 {
+      margin-bottom: 15px;
+      color: #333;
+    }
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+    }
+    .stats div {
+      flex: 1;
+      margin: 10px;
+    }
+    .stats h3 {
+      font-size: 2rem;
+      color: #007BFF;
+    }
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .card {
+      flex: 1 1 calc(33.333% - 20px);
+      background: #fff;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .card h3 {
+      color: #007BFF;
+    }
+    .card p {
+      color: #666;
+    }
+    .btn {
+      display: inline-block;
+      background: #007BFF;
+      color: #fff;
+      padding: 10px 15px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: #0056b3;
+    }
+    footer {
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 20px;
+      background: #007BFF;
+      color: #fff;
+    }
+    @media (max-width: 768px) {
+      .stats {
+        flex-direction: column;
+      }
+      .card-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to the Placement Management System</h1>
+  </header>
+  <div class="container">
+    <!-- Stats Section -->
+    <div class="section stats">
+      <div>
+        <h3>10</h3>
+        <p>Active Companies</p>
+      </div>
+      <div>
+        <h3>200</h3>
+        <p>Students Registered</p>
+      </div>
+    </div>
+
+    <!-- Announcements Section -->
+    <div class="section">
+      <h2>Latest Announcements</h2>
+      <ul>
+        <li><strong>TechCorp Registration Open:</strong> Register by 20th November!</li>
+        <li><strong>GreenTech Drive:</strong> Scheduled for 25th November.</li>
+        <li><strong>Resume Workshop:</strong> Join us on 18th November.</li>
+      </ul>
+    </div>
+
+    <!-- Featured Companies Section -->
+    <div class="section">
+      <h2>Featured Companies</h2>
+      <div class="card-container">
+        <div class="card">
+          <h3>TechCorp</h3>
+          <p>Leading technology solutions provider.</p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+        <div class="card">
+          <h3>InnoStart</h3>
+          <p>Innovative startup for AI solutions.</p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+        <div class="card">
+          <h3>GreenTech</h3>
+          <p>Committed to sustainable energy.</p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2024 Placement Management System</p>
+  </footer>
+</body>
+</html>
