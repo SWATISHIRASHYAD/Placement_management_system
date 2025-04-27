@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../../../Users/shira/OneDrive/Desktop/htmlfiles"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "htmlfiles"
+	}
+}
